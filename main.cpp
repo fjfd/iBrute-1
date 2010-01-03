@@ -20,15 +20,15 @@ int main()
         }
     }
 
-    cout << "Enter hash: ";
+    cout << "Enter hash> ";
     string hash2brute;
      cin >> hash2brute;
 
-    int threadscount;
+    unsigned short int threadscount;
     bool check_threads = false;
 
     while ( check_threads == false ){
-    cout << "How many threads should i use (max. 6): ";
+    cout << "How many threads should i use (max. 6)> ";
      cin >> threadscount;
     if ( threadscount <= 6 ){
         check_threads = true;
