@@ -17,9 +17,17 @@ int main()
     string hash2brute;
      cin >> hash2brute;
 
-    while ( thread_counts <= 6 ){
+    bool okay = false;
+
+    while ( okay == false ){
     cout << "How many threads should i use (max. 6): ";
     unsigned short int threads_count = 0;
      cin >> threads_count;
+    if ( threads_count <= 6 ){
+        okay = true;
+        }
     }
+    cout << okay;
+    cout << algotype;
+    cout << hash2brute;
 }
