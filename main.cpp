@@ -10,12 +10,12 @@ int main()
     cout << "Which hashtype do you want to brute?" << endl;
     
     bool check_algo;
+    string algotype;
     
     while ( check_algo == false ){
     cout << "(MD5, SHA128, SHA256, SHA512)> ";
-    string algotype;
      cin >> algotype;
-    if ( algotype == "MD5" || "SHA128" || "SHA256" || "SHA512" ){
+    if ( algotype == "MD5" || algotype == "SHA128" || algotype == "SHA256" || algotype == "SHA512" ){
         check_algo = true;
         }
     }
