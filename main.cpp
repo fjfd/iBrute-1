@@ -55,32 +55,23 @@ int main()
                 if ( hasherdalesher == hash2brute ){
                     cout << "Match found! The word is: " << content << endl;
                     return 0;
+                    }
+
                 }
-                else if ( hasherdalesher != hashobj.md5( content ) ){
-                    cerr << "No match found! FAIL!" << endl;
-                    return -1;
-                }
-            }
+            
             else if ( algotype == "SHA128" ){
                 hasherdalesher = hashobj.sha128( content );
                 if ( hasherdalesher == hash2brute ){
                     cout << "Match found! The word is: " << content << endl;
                     return 0;
                 }
-                else if ( hasherdalesher != hashobj.sha128( content ) ){
-                    cerr << "No match found! FAIL!" << endl;
-                    return -1;
                 }
-            }
+           
             else if ( algotype == "SHA256" ){
                 hasherdalesher = hashobj.sha256( content );
                 if ( hasherdalesher == hash2brute ){
                     cout << "Match found! The word is: " << content << endl;
                     return 0;
-                }
-                else if ( hasherdalesher != hashobj.sha256( content ) ){
-                    cerr << "No match found! FAIL!" << endl;
-                    return -1;
                 }
             }
             else if ( algotype == "SHA512" ){
@@ -89,16 +80,14 @@ int main()
                     cout << "Match found! The word is: " << content << endl;
                     return 0;
                 }
-                else if ( hasherdalesher != hashobj.sha512( content ) ) {
-                    cerr << "No match found! FAIL!" << endl;
-                    return -1;
-                }
             }
-
+            
         }
-    }  
-        else if ( correct == "N" || correct == "n" ){
-            return 0;
-        }
-    return 0;
+            cerr << "NO MATCH FOUND!" << endl;
+            return -1;
+            
+    }
+   else if ( correct == "N" || correct == "n" ){
+       return -1;
+   }
 }

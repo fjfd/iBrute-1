@@ -1,4 +1,6 @@
 LIBS = -lcryptopp -lpthread
+CFLAGS = -Wall
+LDFLAGS = -static
 
 SOURCES =                \
          main.cpp        \
